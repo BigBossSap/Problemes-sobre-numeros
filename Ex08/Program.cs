@@ -22,15 +22,23 @@ namespace Ex08
             while (num!=0)
             {
                 if (num < comparador) {
-                    comparador = num;
-                   
+                    comparador = num;                                     
                     }
 
-                if (num > comparador)
-                    cicles++;
+
+               
+                
 
                 num = int.Parse(Console.ReadLine());
 
+                
+                    pararContador = true;
+                if (comparador < num)
+                    pararContador = false;
+                if (comparador == num)
+                    pararContador = true;
+                if(pararContador == false)
+                    cicles++;
 
             }
 

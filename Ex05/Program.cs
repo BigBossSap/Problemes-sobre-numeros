@@ -11,36 +11,32 @@ namespace Ex05
   Al finalitzar, ha de dir el número d'introduccions i valors dels números que
   han complert la condició de finalització del programa.*/
 
-            int num;
-            int suma = int.MaxValue;
-            int num2 = 0;
-            int aux = 0;
+            int seguent;
+            int suma = int.MaxValue;          
+            int anterior = 0;
+            int anterior2 = 0;
             int contador = 0;
             
 
             Console.WriteLine("num: ");
-            num = int.Parse(Console.ReadLine());
-            int num1 = 0;
+            anterior = int.Parse(Console.ReadLine());
 
 
-            while (num<=suma)
+
+            do
             {
-                
-                num2 = num;
+                seguent = int.Parse(Console.ReadLine());               
                 contador++;
+                suma = anterior + seguent;
+                anterior2 = anterior;
+                anterior = seguent;
                 
-                num1 = num;
-                suma = num1 + num2;
-                num = int.Parse(Console.ReadLine());
-                Console.WriteLine(suma);
-
-                Console.WriteLine(num1);
-                Console.WriteLine(num2);
-                Console.WriteLine(num);
+                seguent = int.Parse(Console.ReadLine());
                 
-            }
 
-            Console.WriteLine($"Els valors que han complert la condicio son {num1} i {num2}");
+            } while (seguent <= suma);
+
+            Console.WriteLine($"Els valors que han complert la condicio son {anterior2} i {anterior} que sumen {suma} i el numero {seguent} es major");
 
         }
     }
