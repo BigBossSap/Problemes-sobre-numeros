@@ -14,30 +14,30 @@ namespace Ex05
             int seguent;
             int suma = int.MaxValue;          
             int anterior = 0;
-            int anterior2 = 0;
-            int contador = 0;
+            int num1 = 0;
+            int num2 = 0;
+            int contador = 2;
             
 
             Console.WriteLine("num: ");
             anterior = int.Parse(Console.ReadLine());
+            seguent = int.Parse(Console.ReadLine());
 
 
 
             do
             {
-                seguent = int.Parse(Console.ReadLine());               
                 contador++;
                 suma = anterior + seguent;
-                anterior2 = anterior;
+                num2 = anterior;
                 anterior = seguent;
-                
+                num1 = seguent;
                 seguent = int.Parse(Console.ReadLine());
-                
 
             } while (seguent <= suma);
 
-            Console.WriteLine($"Els valors que han complert la condicio son {anterior2} i {anterior} que sumen {suma} i el numero {seguent} es major");
-
+            Console.WriteLine($"Els valors que han complert la condicio son {num2} i {num1} que sumen {suma} i el numero {seguent} es major");
+            Console.WriteLine($"S'han Introduit {contador} numeros");
         }
     }
 }

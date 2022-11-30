@@ -32,13 +32,7 @@ namespace Ex08
                 num = int.Parse(Console.ReadLine());
 
                 
-                    pararContador = true;
-                if (comparador < num)
-                    pararContador = false;
-                if (comparador == num)
-                    pararContador = true;
-                if(pararContador == false)
-                    cicles++;
+                  
 
             }
 
