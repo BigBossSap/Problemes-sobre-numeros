@@ -24,8 +24,6 @@ namespace Ex02
                 if (lletra == 'a' || lletra == 'A')
                 {
                     lletraA = true;
-
-
                 }
 
                 frase += lletra;
@@ -39,8 +37,6 @@ namespace Ex02
                     contador--;
                     frase += lletra;
                 }
-
-
 
 
                 contador++;

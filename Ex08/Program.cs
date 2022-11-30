@@ -10,35 +10,35 @@ namespace Ex08
  quin és el més petit, i quina posició ocupa dins la seqüència.*/
 
 
-            int num;
+            int num, i = 0;
+            string numComplet = "";
             int comparador = int.MaxValue;
-            int cicles = 0;
-            bool pararContador = false;
-            
+            int contTotal = 1;
+            int Cont = 0;
+
+
             Console.WriteLine("num: ");
             num = int.Parse(Console.ReadLine());
 
 
-            while (num!=0)
+            while (num != 0)
             {
-                if (num < comparador) {
-                    comparador = num;                                     
-                    }
+                if (num < comparador)
+                {
+                    comparador = num;
+                    Cont = contTotal;
+                }
+
+                numComplet += num;
 
 
-               
-                
-
+                contTotal++;
                 num = int.Parse(Console.ReadLine());
-
-                
-                  
 
             }
 
             Console.WriteLine(comparador);
-            Console.WriteLine(cicles);
-
+            Console.WriteLine(Cont);
         }
     }
 }
